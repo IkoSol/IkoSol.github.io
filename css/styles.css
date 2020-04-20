@@ -52,8 +52,8 @@ figure {
     margin: 0
 }
 
-/*-------------- HEADER --------------*/
 
+/*-------------- HEADER --------------*/
 .container{
     max-width: 1000px;
     flex: 1;
@@ -118,10 +118,6 @@ figure {
 }
 
 .project {
-    /* border-top: 10px solid gray;
-    border-right: 10px solid gray;
-    border-left: 10px solid gray;
-    border-bottom: 10px solid gray; */
     border: 1px solid gray;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -308,6 +304,7 @@ figure {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+
 /* DESKTOP FIRST EMPIEZA DESDE EL MEDIA QUERY MÁS GRANDE */
 /* Se usan estas medidas porque son medidas estandar pero pueden utilizarse otras */
 
@@ -353,4 +350,5 @@ figure {
     body{
         border: 10px solid yellow
     }
+
 }
