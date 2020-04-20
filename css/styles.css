@@ -52,6 +52,49 @@ figure {
     margin: 0
 }
 
+/*-------------- HEADER --------------*/
+
+.container{
+    max-width: 1000px;
+    flex: 1;
+    margin: 0 auto;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+
+.header {
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header ol{
+    display: flex;
+    height: inherit;
+}
+
+.header ol li{
+    height: inherit;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+/*-------------- HERO --------------*/
 .hero{
     height: 300px;
     /* background-image: url('../images/iko.jpg'); */
@@ -62,6 +105,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero-image{
@@ -86,6 +130,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .project-course,
@@ -116,35 +161,8 @@ figure {
     width: 500px;
 }
 
-.header {
-    background-color: #1b2127;
-    color: white;
-    display: flex;
-    height: 70px;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .menu{
     height: inherit;
-}
-
-.header ol{
-    display: flex;
-    height: inherit;
-}
-
-.header ol li{
-    height: inherit;
-}
-
-.header a{
-    color: white;
-    text-decoration: none;
-    height: inherit;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
 }
 
 .flexbox{
@@ -170,6 +188,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer img{
@@ -233,10 +252,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.social{
-    
+    flex-wrap: wrap;
 }
 
 .social-link{
@@ -292,12 +308,49 @@ figure {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.container{
-    width: 80%;
-    margin: 0 auto;
-    display: inherit;
-    align-items: inherit;
-    justify-content: inherit;
-    height: inherit;
-    flex-wrap: inherit;
+/* DESKTOP FIRST EMPIEZA DESDE EL MEDIA QUERY MÁS GRANDE */
+/* Se usan estas medidas porque son medidas estandar pero pueden utilizarse otras */
+
+@media screen and (max-width: 1024px){
+    body{
+        border: 10px solid green
+    }
+}
+@media screen and (max-width: 767px){
+    body{
+        border: 10px solid red
+    }
+
+    .header .logo{
+        text-align: center;
+    }
+
+    .header{
+        display: block;
+        height: auto;
+    }
+
+    .header ol{
+        display: block;
+    }
+
+    .header ol li{
+        height: 50px;
+    }
+
+    .header a{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+    body{
+        border: 10px solid blue
+    }
+}
+
+@media screen and (max-width: 320px){
+    body{
+        border: 10px solid yellow
+    }
 }
