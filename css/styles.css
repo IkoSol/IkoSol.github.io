@@ -418,6 +418,7 @@ figure {
         font-size: 2em;
         z-index: 2;
         width: auto;
+        background: rgba(0,0,0,.3);
     }
 
     .container{
