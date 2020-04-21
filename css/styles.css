@@ -26,6 +26,7 @@ h1 {
     letter-spacing: -.2px;
     color: white;
     margin: 0;
+    width: 50%;
 }
 
 h1 strong{
@@ -95,6 +96,7 @@ figure {
 
 
 /*-------------- HERO --------------*/
+
 .hero{
     height: 300px;
     /* background-image: url('../images/iko.jpg'); */
@@ -111,6 +113,9 @@ figure {
 .hero-image{
     object-fit: cover; /*se arreglan las dimensiones originales de la imágen*/
 }
+
+
+/*-------------- PORTFOLIO --------------*/
 
 .portfolio{
     background: #fafafa;
@@ -150,11 +155,15 @@ figure {
 }
 
 .project-details{
-    width: 500px;
+    width: 50%;
 }
 
 .project-imageContainer{
-    width: 500px;
+    width: 50%;
+}
+
+.project-image{
+    max-width: 100%;
 }
 
 .menu{
@@ -195,6 +204,9 @@ figure {
     color: white
 }
 
+
+/*-------------- EVENT --------------*/
+
 .event-list{
     display: flex;
     flex-wrap: wrap;
@@ -205,9 +217,9 @@ figure {
 }
 
 .event{
-    margin: 10px;
-    width: 480px;
-    flex-shrink: 0; /*para conservar siempre su tamaño*/
+    margin: 1%;
+    width: 48%;
+    flex-shrink: 0; /*para conservar siempre su tamaño y nunca haga resize*/
     border-radius: 10px;
     overflow: hidden; /*sirve para ocultar bordes de los hijos que se salen del borde de los padres*/
     background: #f4fbff;
@@ -241,6 +253,9 @@ figure {
     border-radius: 5px;
 }
 
+
+/*-------------- CONTACT --------------*/
+
 .contact{
     background-color: #056fff;
     color: white;
@@ -270,10 +285,6 @@ figure {
 }
 .social-link.instagram{
     background-image: url('../images/instagram.svg');
-}
-
-.form-email{
-    margin-left: 20px;
 }
 
 .form-email input{
@@ -309,14 +320,45 @@ figure {
 /* Se usan estas medidas porque son medidas estandar pero pueden utilizarse otras */
 
 @media screen and (max-width: 1024px){
-    body{
-        border: 10px solid green
+
+    /*-------------- HERO --------------*/
+
+    .hero{
+        width: auto;
+        height: auto;
+        position: relative;
+        overflow: hidden; /*Ayuda a que se oculten los desbordados de las imágenes*/
+        padding: 3em;
+    }
+
+    .hero-image{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 2em;
+        z-index: 2;
+        width: auto;
+    }
+
+    .container{
+        padding: 0 1em;
     }
 }
+
+
 @media screen and (max-width: 767px){
-    body{
+    /* body{
         border: 10px solid red
-    }
+    } */
+
+    /*-------------- HEADER --------------*/
 
     .header .logo{
         text-align: center;
@@ -338,17 +380,143 @@ figure {
     .header a{
         justify-content: center;
     }
-}
 
-@media screen and (max-width: 480px){
-    body{
-        border: 10px solid blue
+
+    /*-------------- HERO --------------*/
+
+    h1{
+        font-size: 1.4em;
+        width: auto;
+    }
+
+
+
+
+    /*-------------- PORTFOLIO --------------*/
+    .project{
+        display: block;
+    }
+
+    .project-imageContainer{
+        width: auto; /* ES MEJOR PONERLE SIEMPRE auto QUE 100% */
+        text-align: center;
+    }
+
+    .project-details{
+        width: auto;
+        /* font-size: 10px; */
+    }
+
+    .project-course, .project-date, .project-url{
+        margin: .3em 0;
+    }
+
+    .project-title{
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+
+    .project-url{
+        font-size: 1em;
+    }
+
+    .project-course{
+        font-size: .7em;
+    }
+
+    .project-date{
+        font-size: 1em;
+    }
+
+    .project-description{
+        font-size: .8em;
+    }
+
+    
+    /*-------------- PORTFOLIO --------------*/
+
+    .event{
+        width: auto;
+        flex-shrink: initial;
+    }
+
+    .event img{
+        width: 100%;
+    }
+
+
+    /*-------------- CONTACT --------------*/
+
+    .contact{
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+
+    .form-email button{
+        margin: 1em auto;
+    }
+
+    .form-email h3{
+        margin-top: 0;
+    }
+
+
+    /*-------------- FOOTER --------------*/
+
+    .footer{
+        display: block;
+        text-align: center;
+        border: 1px solid transparent;
     }
 }
 
+
+@media screen and (max-width: 480px){ /* DUDAAAA: POR QUE AQUI CAMBIARON TODOS LOS TEXTOS DE TAMAÑO SI SOLAMENTE AGREGO UN CAMBIO EN PROJECT DETAILS*/
+    /* body{
+        border: 10px solid blue
+    } */
+
+    /*-------------- HERO --------------*/
+
+    h1{
+        font-size: 1em;
+        width: auto;
+    }
+
+    .hero{
+        padding: 3em 2em;
+    }
+
+    /*-------------- PORTFOLIO --------------*/
+ 
+    .project-details{
+        width: auto;
+        font-size: 12px; 
+    }
+
+    .event-detail{
+        margin: -em .5em .5em;
+        padding: 1em;
+    }
+}
+
+
 @media screen and (max-width: 320px){
-    body{
+    /* body{
         border: 10px solid yellow
+    } */
+
+    /*-------------- HERO --------------*/
+
+    h1{
+        font-size: 1.1em;
+        width: auto;
+    }
+
+    .hero{
+        padding: 2em 1em; 
     }
 
 }
