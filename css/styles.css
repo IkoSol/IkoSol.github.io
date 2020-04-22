@@ -24,7 +24,7 @@ valores */
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    line-height: 1;
+    line-height: 1;     
   
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
@@ -392,7 +392,7 @@ figure {
 /* DESKTOP FIRST EMPIEZA DESDE EL MEDIA QUERY MÁS GRANDE */
 /* Se usan estas medidas porque son medidas estandar pero pueden utilizarse otras */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
 
     /*-------------- HERO --------------*/
 
@@ -418,11 +418,25 @@ figure {
         font-size: 2em;
         z-index: 2;
         width: auto;
-        background: rgba(0,0,0,.3);
+        background: rgba(0,0,0,.2);
     }
 
     .container{
         padding: 0 1em;
+    }
+
+
+    /*-------------- PORTFOLIO --------------*/
+
+    .portfolio{
+        /* padding: 10px 0; */
+    }
+
+
+    /*-------------- EVENT --------------*/
+
+    .event-list-title{
+        margin-left: 0;
     }
 }
 
@@ -493,10 +507,18 @@ figure {
         width: auto;
     }
 
-
+    h2{
+        font-size: 1.2em;
+        margin: .5em 0;
+    }
 
 
     /*-------------- PORTFOLIO --------------*/
+
+    .portfolio{
+        padding-top: .1px;
+    }
+
     .project{
         display: block;
     }
@@ -508,7 +530,7 @@ figure {
 
     .project-details{
         width: auto;
-        /* font-size: 10px; */
+        /* font-size: 14px; */
     }
 
     .project-course, .project-date, .project-url{
@@ -533,11 +555,11 @@ figure {
     }
 
     .project-description{
-        font-size: .8em;
+        font-size: 1em;
     }
 
     
-    /*-------------- PORTFOLIO --------------*/
+    /*-------------- EVENT --------------*/
 
     .event{
         width: auto;
@@ -597,12 +619,20 @@ figure {
  
     .project-details{
         width: auto;
-        font-size: 12px; 
+        font-size: 14px; 
     }
 
     .event-detail{
         margin: -em .5em .5em;
         padding: 1em;
+    }
+
+    /*-------------- CONTACT --------------*/
+
+    .social-link{
+        height: 40px;
+        width: 40px;
+        background-size: 100%;
     }
 }
 
